@@ -2,167 +2,23 @@
 <html>
 
 <head>
-    <title>GreenCo</title>
-    <meta charset=UTF-8 />
-    <link rel="stylesheet" type="text/css" href="./css/costSavingsCalculator.css" />
-    <meta name="description" content="Home | EXTRAPLANETEERS">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+  <title>GreenCo</title>
+  <meta charset=UTF-8 />
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <meta name="description" content="Home | Electrimo">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
 </head>
 
 <body>
-    <div class="topnav">
-        <ul>
-            <li><a href="../index.html">Electrimo</a></li>
-            <li style="float:right"><a href="./about.html">About Us</a></li>
-            <li style="float:right"><a href="">Cost Savings Calculator</a></li>
-        </ul>
+
+  <div class="text-box">
+    <div class="heading" align="center">Electrimo</div>
+    <div class="button-wrapper">
+      <a href=costSavingsCalculator.html class="button">Get Started</a>
+      <a href=about.html class="button">About Us</a>
     </div>
-
-    <div>
-        <form>
-            <label for="km"> Average Kilometers per Week </label>
-            <input type="text" id="kmWeek" name="Kilometers" placeholder="Estimated km per week">
-
-            <label for="liters"> Liters Per 100 Kilometers </label>
-            <input type="text" id="l100" name="lastname" placeholder="Estimated Liters per 100 km">
-
-            <label for="model">Electric Car Model</label>
-            <select id="model" name="model">
-                <option id="1">BMW i3</option>
-                <option id="2">Chevrolet BOLT</option>
-                <option id="3">Ford Focus Electric</option>
-                <option id="4">Hyundai IONIQ Electric</option>
-                <option id="5">Hyundai KONA Electric</option>
-                <option id="6">Jaguar I-Pace</option>
-                <option id="7">Kia Niro</option>
-                <option id="8">Kia Soul Electric</option>
-                <option id="9">Nissan LEAF</option>
-                <option id="10">Smart Fortwo Electric</option>
-                <option id="11">Tesla Model 3</option>
-                <option id="12">Tesla Model S</option>
-                <option id="13">Tesla Model X</option>
-                <option id="14">Tesla CyberTruck</option>
-                <option id="15">Volkswagen E-Golf</option>
-            </select>
-
-            <label for="province">Province</label>
-            <select id="province" name="province">
-                <option id="NS">Nova Scotia</option>
-                <option id="NF">Newfoundland & Labrador</option>
-                <option id="PEI">Prince Edward Island</option>
-                <option id="NB">New Brunswick</option>
-            </select>
-
-            <input type="button" onClick="result()" value=Submit>
-
-            <p>Cost of Fuel per Year (Gas Vehicle) = $
-                <span id="result1"></span>
-            </p>
-
-            <p>Cost of Electricty per Year = $
-                <span id="result2"></span>
-            </p>
-
-            <p>Carbon Emission =
-                <span id="result3"></span>g
-            </p>
-
-            <p>Savings = $
-                <span id="result4"></span>
-            </p>
-
-            <p>Price of Electric Car = $
-                <span id="result5"></span>
-            </p>
-
-            <script>
-                function result() {
-
-                    kmWeek = document.getElementById("kmWeek").value;
-                    l100 = document.getElementById("l100").value;
-
-                    var ddl = document.getElementById("model");
-                    var selectedValue = ddl.options[ddl.selectedIndex].value;
-
-                    if (selectedValue == "BMW i3") {
-                        efficiency = 165;
-                        price = 45000;
-                    } else if (selectedValue == "Chevrolet BOLT") {
-                        efficiency = 174;
-                        price = 45000;
-                    } else if (selectedValue == "Ford Focus Electric") {
-                        efficiency = 193;
-                        price = 30000;
-                    } else if (selectedValue == "Hyundai IONIQ Electric") {
-                        efficiency = 155;
-                        price = 40000;
-                    } else if (selectedValue == "Hyundai KONA Electric") {
-                        efficiency = 174;
-                        price = 45000;
-                    } else if (selectedValue == "Jaguar I-Pace") {
-                        efficiency = 232;
-                        price = 91000;
-                    } else if (selectedValue == "Kia Niro") {
-                        efficiency = 173;
-                        price = 27000;
-                    } else if (selectedValue == "Kia Soul Electric") {
-                        efficiency = 173;
-                        price = 43000;
-                    } else if (selectedValue == "Nissan LEAF") {
-                        efficiency = 164;
-                        price = 45000;
-                    } else if (selectedValue == "Smart Fortwo Electric") {
-                        efficiency = 167;
-                        price = 35000;
-                    } else if (selectedValue == "Tesla Model 3") {
-                        efficiency = 150;
-                        price = 51000;
-                    } else if (selectedValue == "Tesla Model S") {
-                        efficiency = 180;
-                        price = 100600;
-                    } else if (selectedValue == "Tesla Model X") {
-                        efficiency = 205;
-                        price = 111000;
-                    } else if (selectedValue == "Tesla CyberTruck") {
-                        efficiency = 256;
-                        price = 53000;
-                    } else if (selectedValue == "Volkswagen E-Golf") {
-                        efficiency = 168;
-                        price = 38000;
-                    }
-
-                    var province = document.getElementById("model");
-                    var selectedProvince = ddl.options[ddl.selectedIndex].value;
-
-                    if (selectedProvince = "Nova Scotia") {
-                        fuelCost = 111.2;
-                        electricityCost = 15; 
-                    } else if (selectedProvince = "Newfoundland & Labrador") {
-                        fuelCost = 127.1;
-                        electricityCost = 13.8; 
-                    } else if (selectedProvince = "Prince Edward Island") {
-                        fuelCost = 114;
-                        electricityCost = 16.8; 
-                    } else if (selectedProvince = "New Brunswick") {
-                        fuelCost = 110.2;
-                        electricityCost = 12.7; 
-                    }
-
-                    result1 = ((fuelCost/100) * (l100/100) * (kmWeek/7) * 275) + (fuelCost/100) * ((l100/100)*0.987) * (kmWeek/7) * 90;
-                    result2 = (((electricityCost / 100) * (efficiency / 1000) * (kmWeek / 7)) * 275) + (((electricityCost / 100) * ((efficiency / 1000) * 0.8) * (kmWeek / 7)) * 90);
-                    document.getElementById("result1").innerHTML = result1;
-                    document.getElementById("result2").innerHTML = result2;
-                    document.getElementById("result3").innerHTML = 2392 * l100 * (kmWeek / 7);
-                    document.getElementById("result4").innerHTML = result1 - result2;
-                    document.getElementById("result5").innerHTML = price;
-                }
-            </script>
-
-        </form>
-
-    </div>
-
+  </div>
 </body>
 
 </html>
