@@ -1,4 +1,4 @@
 # electrimo
-Atlantic Engineering Compeition
+Atlantic Engineering Competition
 
 Visit website at https://ahmadkammonah.github.io/atlanticEngineeringCompeition2021/
